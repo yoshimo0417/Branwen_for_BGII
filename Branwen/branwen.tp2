@@ -41,7 +41,7 @@ Small addition by jastey (same as in the readme):
 Please note: for BGII:EE and EET, if you want to create a mod that uses any other letters or symbols than the latin (english) alphabet, you need to provide the texts in UTF-8 (without BOM) format, whereas the original game needs them in ANSI. So in case you do, you'll need to get familiar with using d/tra-pairs in your mod ("traify-ing" your mod) and using HANDLE_CHARSETS + iconv.exe for text transformation upon install. 
 */
 	
-ACTION_DEFINE_ARRAY 9xnoconvert BEGIN END //list here files that do not need to be converted, e.g. a file that only contains setup files.
+ACTION_DEFINE_ARRAY 9xnoconvert BEGIN install END //list here files that do not need to be converted, e.g. a file that only contains setup files.
 ACTION_DEFINE_ARRAY 9xreload BEGIN setup END //list the files that get read in after LANGUAGE declaration so the correct format will be used for ingame texts.
 
   LAF HANDLE_CHARSETS
@@ -63,6 +63,8 @@ LANGUAGE ~English~ ~English~ ~Branwen/tra/English/setup.tra~ // This is an examp
 LANGUAGE ~Russian (by Jericho2)~ ~Russian~ ~Branwen/tra/Russian/setup.tra~ 
 
 LANGUAGE ~French (by Shamou, JohnBob and jazira)~ ~French~ ~Branwen/tra/French/setup.tra~
+
+LANGUAGE ~Simplefied Chinese (by Yoshimo0417)~ ~schinese~ ~Branwen/tra/schinese/install.tra~
 
 BEGIN @1 /* Branwen BG2 NPC mod for players and modders */ // This is the name of your mod.
 

@@ -1,0 +1,78 @@
+/* Let's talk about traification a little bit. When a NPC mod is finished, most modders prefer to make it available to the translators - to have Kelsey or Xan available in different languages.
+
+How to do it? Simple: you need to copy Setup-Branwen.exe to Weidu.exe, place it to BG2 directory together with your dialogue file MyFile.d and run this command in your BG2 directory:
+ weidu.exe --traify MyFile.d --out MyFile.tra
+and do it for every file. 
+
+Then you need to place your .d files to Dialogue directory, and your .tra files - to English directory in your mod folder(you can also use Translations/English, if you want).
+Add these lines to your setup.tra, after VERSION and before BEGIN:
+
+AUTO_TRA ~Branwen/%s~
+LANGUAGE ~English~ ~English~ ~Branwen/English/Setup-Branwen.tra~
+
+But we are not going to do a full traification, that would make the files harder to read. We're just traifying the journal entries, because without these pretty lines, our journal entries won't work on BG2:EE. 
+I recommend using big numbers for journal entries, like @20000 - it means that there will be no @20000 line in any other file. Just in case. */
+
+
+@1    = ~布朗温BG2队友MOD~
+@2    = ~布朗温~
+@3    = ~以欧吕尔的冰冷吐息起誓！见到新面孔、再次品味自由的感觉真好。~ [o#bran01]
+@4    = ~坦帕斯神，请原谅我的懦弱。~ [o#bran02]
+@5    = ~能够和你们这些强壮的战士并肩作战，我感到很骄傲。~ [o#bran04]
+@6    = ~我们的行为实在不配称作战士。~ [o#bran05]
+@7    = ~这种行为实在太过懦弱了！~ [o#bran06]
+@8    = ~和你们这样的人一起行动真是不光彩。~ [o#bran07]
+@9    = ~我一直梦想着能够带领像你们这样的团体。~ [o#bran08]
+@10   = ~我好疲倦。~ [o#bran09]
+@11   = ~欧吕尔该死的冰锥。我无聊死了。~ [o#bran10]
+@12   = ~坦帕斯神！请赐给我们胜利吧！~ [o#bran03]
+@15   = ~不过是皮肉之伤。~ [o#bran11]
+@16   = ~身处森林之中，我总是感到自在。这让我想起了家乡。~
+@17   = ~坦帕斯在上，我太爱大城市了！~
+@18   = ~危险临近了，朋友们，多加小心。~
+@19   = ~啊，这般晴好天气，最适合旅行了。~
+@20   = ~我什么都看不见。难道我们是见不得光的窃贼，连觉都不睡吗？~
+@21   = ~坦帕斯神保护我。~ [o#bran17]
+@22   = ~你有什么命令？~ [o#bran18]
+@23   = ~有事吗？~ [o#bran19]
+@24   = ~今天是适合壮烈牺牲的一天。~ [o#bran20]
+@25   = ~如果坦帕斯神的旨意就是这样，我只好照办。~ [o#bran21]
+@26   = ~受维尔寇利刃之助。~ [o#bran22]
+@27   = ~苟且偷生不如从容就义。~ [o#bran23]
+@28   = ~愿欧吕尔的霜吻降于我们的敌人。~ [o#bran24]
+@29   = ~受维尔寇坚艄之助。~ [o#bran25]
+@30   = ~神的眷顾再好也是善变的。~ [o#bran26]
+@31   = ~在战场上牺牲是最光荣的死法。~ [o#bran40]
+@32   = ~敞开心胸吧，坦帕斯会引领你倔强的灵魂。~ [o#bran30]
+@33   = ~坦帕斯！~
+@34   = ~呃啊！~
+@35   = ~来把武器！快！~
+@36   = ~我拿不动了，只好扔掉了。~
+@37   = ~我的法术！~
+@38   = ~当问及她的过去时，布朗温表示她很小就离开诺汉岛的家乡海狼镇。她被村人赶走的原因是由于她想要成为牧师，而在当地这个职位都是保留给男性。对于这件事，她并没有太多怨言，因为她知道自己的信仰必须要面对这样的磨难，才有真正的价值。她沿着海岸四处游历，对各地的民兵提供服务。最后在那西凯的附近加入一群冒险者。当时她并不知道这些人干的是抢劫的勾当。当他们首次攻击一个无武装的商队时，布朗温就反叛了，一个名叫传兹克的法师随即将她变成石头。虽然最后的结果并不算是十分幸运，但是布朗温感觉得到，坦帕斯神对她的行为相当赞许。攻击那些手无寸铁的人是罪恶的行为。~
+@39   = ~布朗温的尸体~
+@40   = ~布朗温被芭荻所俘，变成吸血鬼，她强迫你杀死她。可能有办法解救她，但是你不知道是什么办法。~
+@41   = ~布朗温的祖母~
+@42   = ~巴尔王座事件结束后，布朗温仍留在她朋友们身边。他们共同经历的全新冒险甚至堪比崔斯特，事实上，如果谣言属实，这位著名的黑暗精灵游侠曾一度在银月城外与他们并肩作战。
+
+然而，数年之后，布朗温开始思念家乡，最终决定重返昔日的故乡。身为坦帕斯神圣战士和高阶女祭司的她，受到了大部分镇民的热烈欢迎，并在那里逗留了一段时间。
+
+但冒险的召唤从未停止，布朗温很快再次加入了她的朋友们，为崇高的正义目标而战。各地的许多人，都会铭记这位金发女子的笑容，时常回想起她最爱的那句口头禅：“坦帕斯的盾牌在上！”~
+@43   = ~布朗温和<CHARNAME>的足迹曾三次穿越国度，从卡拉-图到诺汉群岛。他们始终相伴，并肩对抗巨龙、驯服恶魔，既与君王斗智，也与无赖共饮。
+
+他们赢得了平民百姓的爱戴，也获得了地下世界的敬畏，即便如此，两人总愿为彼此留出专属时光。 
+
+最终，布朗温与<CHARNAME>一度安定下来，但新的冒险召唤总会如期而至；他们笑着换上旅行装束，再次踏上征途。 
+
+诚然，他们已走过无数道路，仍有更多未知之地等待探索。布朗温会再次牵起爱人的手，微笑着说道：“如果坦帕斯的旨意如此，你有什么命令？”  ~
+
+// These are the entries for Bodhi abduction. If you'd like to see how they are used, please, take a look at O#BranJ.d file, but only after you've read simpler dialogue files.
+
+@100001 = ~与芭荻的最后决战
+
+在我到达芭荻的藏身处之前，她突然出现偷袭我，警告我说她已经知道了我的追击，并且从我身边偷走了我心中最重要的人：布朗温。在她消失并且派出不死怪物手下攻击我之前，芭荻警告说如果我再继续追杀她，我就会失去我无法想像的事物。我不能放弃寻找莱恩之灯的任务……但是我爱人的生命与灵魂却也遭到了危险！~
+@100002 = ~与芭荻的最后决战
+
+虽然我很害怕芭荻对我的最后复仇会让我永远失去布朗温，但是这书本上记载的情报似乎没有错……阿曼纳塔的神像不只恢复了布朗温的生命，也解除了她身上所中的吸血鬼诅咒。~
+
+// Setup-MyMod.tra is also used for item descriptions, the NPC's soundset, and various character names. If you're going to write a more complex mod with quests and new items, look at Xan's code for various examples.
